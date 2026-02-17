@@ -13,4 +13,5 @@ class LLMClient:
             model=self.model,
             messages=messages
         )
+        
         return resp["message"]["content"]
