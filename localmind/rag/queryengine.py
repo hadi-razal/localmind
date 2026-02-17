@@ -41,7 +41,6 @@ class RagQuery:
             storage_context=storage_context,
             embed_model=self.embed_model,
         )
-        
        
         query_engine = index.as_query_engine(
             llm=self.llm,

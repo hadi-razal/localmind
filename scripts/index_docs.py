@@ -1,4 +1,4 @@
-from rag.indexer import RagIndexer
+from localmind.rag.indexer import RagIndexer
 
 
 def main():

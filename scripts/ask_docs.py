@@ -1,4 +1,4 @@
-from rag.queryengine import RagQuery
+from localmind.rag.queryengine import RagQuery
 
 
 def main():
@@ -18,8 +18,6 @@ def main():
             response = rag.ask(question, top_k=5)
             
             print("\nLocalMind >")
-            # Access the response text properly
-            # llama_index Response objects can be accessed via str() or .response attribute
             if response is None:
                 response_text = "Empty Response (None)"
             elif hasattr(response, 'response') and response.response:
@@ -38,11 +36,6 @@ def main():
 
             # Show sources
             if hasattr(response, "source_nodes") and response.source_nodes:
-                # print("Sources:")
-                # for i, node in enumerate(response.source_nodes, start=1):
-                #     metadata = node.node.metadata or {}
-                #     source = metadata.get("file_name") or metadata.get("source") or "Unknown"
-                #     print(f"{i}. {source}")
                 print()
         except ValueError as e:
             print(f"\nError: {e}\n")

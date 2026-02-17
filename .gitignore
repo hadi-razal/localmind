@@ -22,3 +22,6 @@ Thumbs.db
 
 # Generated data
 storage/
+
+# User data
+data/
